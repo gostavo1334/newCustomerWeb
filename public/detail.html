@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details - Google Sheets CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Details</h1>
+            <p class="subtitle">Full information for this contact</p>
+        </header>
+        
+        <div class="controls">
+            <button id="backBtn" class="btn btn-secondary">
+                Back to List
+            </button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading contact details...</p>
+        </div>
+        
+        <div id="error" class="error-message" style="display: none;"></div>
+        
+        <div class="detail-container">
+            <div id="detailContent"></div>
+        </div>
+        
+        <div class="status-bar">
+            <span id="status"></span>
+        </div>
+    </div>
+    
+    <script src="detail.js"></script>
+</body>
+</html>

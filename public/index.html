@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Google Sheets Contacts</h1>
+            <p class="subtitle">View contact list and access full details</p>
+        </header>
+        
+        <div class="controls">
+            <button id="refreshBtn" class="btn btn-primary">
+                Refresh Data
+            </button>
+            <button id="addBtn" class="btn btn-success">
+                Add New Row
+            </button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading data from Google Sheets...</p>
+        </div>
+        
+        <div id="error" class="error-message" style="display: none;"></div>
+        
+        <div class="table-container">
+            <table id="dataTable">
+                <thead id="tableHeader">
+                    <tr></tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="status-bar">
+            <span id="status"></span>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Modal -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Row</h2>
+                <button id="closeModal" class="close-btn">Close</button>
+            </div>
+            <form id="dataForm">
+                <div id="formFields"></div>
+                <div class="modal-footer">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
